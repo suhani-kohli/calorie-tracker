@@ -1,12 +1,13 @@
 import React from 'react'
 import { Link } from "react-router-dom";
+import './Styles.css';
 
 const NavPanel = () => {
     return (
         <div>
             <header>
-                <nav>
-                    <ul>
+                <nav className="panel">
+                    <ul className="list">
                         <li>
                             <Link to="/">Diary</Link>
                         </li>

@@ -1,0 +1,35 @@
+
+.panel {
+    background-color: var(--lightGreen);
+    width:100%;
+}
+
+.list {
+    list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
+      margin: auto;
+}
+
+li a {
+    text-transform: uppercase;
+        line-height: 45px;
+        font-size: 12px;
+        font-weight: 500;
+        color: #ffffff !important;
+        padding: 0 21px;
+        display: block;
+
+}
+
+li a:hover {
+    background-color: var(--darkGreen);
+    color: white;
+  }
