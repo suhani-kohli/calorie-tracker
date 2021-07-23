@@ -1,0 +1,64 @@
+
+
+.food-diary {
+  display: grid;
+  align-items: center;
+  max-width: 100%;
+  margin: auto;
+}
+
+  .heading {
+    color: var(--darkGreen);
+    text-transform: capitalize;
+    display: flex;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 5px;
+    padding-right: 10px;
+    align-self: center;
+    width: 100%;
+    border-bottom: 1px solid var(--lightGreen);
+    justify-content: space-evenly;
+  }
+  .headerText {
+    font-weight: bolder;
+    font-size: 32px;
+  }
+  .Datebutton {
+    background-color: var(--darkGreen);
+    color: white !important;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding: 5px;
+    height: 50px;
+    width: 180px;
+    align-items: center;
+    font-size: 15px !important;
+    padding-right: 5px !important;
+  }
+
+  .food-diary-button{
+    width: 170px;
+    height: 70px;
+    align-self: center;
+    border-style: none;
+    cursor: pointer;
+  }
+
+  .food-diary-button:hover{
+    background-color: var(--lightGreen);
+  } 
+
+
+  .prev{
+    border-bottom-left-radius: 35px;
+    border-top-left-radius: 10px;
+  } 
+
+
+  .next{
+    border-bottom-right-radius: 35px;
+    border-top-right-radius: 10px;
+  } 
+
+
