@@ -1,0 +1,33 @@
+
+
+
+
+.meal-header {
+  color: #00548f;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: capitalize;
+  text-align: left;
+  padding: 15px 5px 5px 5px;
+}
+
+
+.meal-name {
+  padding-right: 190px;
+}
+
+
+.nutrient-column {
+  background: var(--darkGreen);
+  color: #fff;
+  padding: 5px 10px 5px 10px;
+  border: 1px solid #fff;
+  font-size: 25px;
+  font-weight: normal;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.subtitle {
+  text-transform: lowercase;
+}

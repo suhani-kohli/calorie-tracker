@@ -1,4 +1,5 @@
 import React from 'react'
+import FoodDiaryHeaders from '../../components/FoodDiaryHeaders';
 import './Styles.css'
 
 const Diary = () => {
@@ -16,6 +17,9 @@ const Diary = () => {
                         {"-->"}
                     </button>
                 </span>
+                <div className="food-diary-container">
+                    <FoodDiaryHeaders />
+                </div>
             </div>
         </div>
     )
