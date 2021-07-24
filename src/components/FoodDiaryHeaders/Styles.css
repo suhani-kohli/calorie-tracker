@@ -1,8 +1,12 @@
 
+.meal-header{
+  width: 100%;
+  position: relative;
+  left: 30%
+}
 
 
-
-.meal-header {
+.meal-header tr{
   color: #00548f;
   font-weight: bold;
   font-size: 16px;

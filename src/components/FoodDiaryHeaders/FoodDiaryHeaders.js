@@ -3,8 +3,8 @@ import "./Styles.css";
 
 const FoodDiaryHeaders = ({ header }) => {
    return (
-      <thead>
-         <tr className="meal-header">
+      <thead className="meal-header">
+         <tr >
             <td className=" meal-name"></td>
 
             <td className=" nutrient-column">
