@@ -2,7 +2,7 @@
 .meal-header{
   width: 100%;
   position: relative;
-  left: 30%
+  left: 33.65%
 }
 
 
@@ -26,10 +26,11 @@
   color: #fff;
   padding: 5px 10px 5px 10px;
   border: 1px solid #fff;
-  font-size: 25px;
+  font-size: 12px;
   font-weight: normal;
   text-align: center;
   text-transform: capitalize;
+  min-width: 60px;
 }
 
 .subtitle {
