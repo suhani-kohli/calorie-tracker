@@ -1,0 +1,44 @@
+
+.add-food-page {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-food-page h1 {
+    text-transform: capitalize;
+    color: var(--darkGreen);
+    text-align: center;
+    font-size: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: auto;
+  }
+
+
+.add-food-page form {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+.add-food-page input {
+    display: flex;
+    flex-direction: row;
+    width: 32%;
+    padding: 0.5em;
+    line-height: 2;
+    font-size: 13px;
+    border-radius: 0.7em;
+    border-color: var(--lightGreen);
+    text-align: center;
+    font-weight: bold;
+  }
+
+
+  .add-food-page button {
+    width: 40%;
+    padding: 5px;
+    margin-top: 20px;
+    border: 1px solid var(--darkGreen);
+  }
