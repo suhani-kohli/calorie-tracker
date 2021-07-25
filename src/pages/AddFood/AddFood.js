@@ -1,19 +1,30 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Styles.css";
+import { app_id, app_key } from "../../constants/AppConstants";
 
-
-const food = {
-    amount: "",
-    size: "",
-    foodText: ""
-};
 
 const AddFood = ({ date }) => {
+    const [food, setFood] = useState({
+        amount: "",
+        size: "",
+        foodText: ""
+    });
     const [inputFood, setInputFood] = useState(food);
+
+    useEffect(() => {
+        const url = `https://api.edamam.com/api/nutrition-data?app_id=${app_id}&app_key=${app_key}&ingr=${food.amount}%20${food.size}%20${food.foodText}`;
+        fetch(url)
+            .then(response => response.json())
+            .then(result => {
+                console.log(result);
+                console.log(url);
+            })
+            .catch(error => console.log("Fetch error: ", error.message));
+    }, [food]);
 
     const handleSubmit = e => {
         e.preventDefault();
-        console.log("get food details");
+        setFood(inputFood);
     };
 
     return (
