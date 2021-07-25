@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Styles.css";
 import { app_id, app_key } from "../../constants/AppConstants";
+import FoodData from "../../components/FoodData";
 
 
 const AddFood = ({ date }) => {
@@ -10,6 +11,15 @@ const AddFood = ({ date }) => {
         foodText: ""
     });
     const [inputFood, setInputFood] = useState(food);
+    const [itemData, setItemData] = useState({
+        calories: 0,
+        totalNutrientsKCal: {
+            ENERC_KCAL: {},
+            PROCNT_KCAL: {},
+            FAT_KCAL: {},
+            CHOCDF_KCAL: {}
+        }
+    });
 
     useEffect(() => {
         const url = `https://api.edamam.com/api/nutrition-data?app_id=${app_id}&app_key=${app_key}&ingr=${food.amount}%20${food.size}%20${food.foodText}`;
@@ -18,6 +28,10 @@ const AddFood = ({ date }) => {
             .then(result => {
                 console.log(result);
                 console.log(url);
+                setItemData({
+                    calories: result.calories,
+                    totalNutrientsKCal: result.totalNutrientsKCal
+                });
             })
             .catch(error => console.log("Fetch error: ", error.message));
     }, [food]);
@@ -26,6 +40,7 @@ const AddFood = ({ date }) => {
         e.preventDefault();
         setFood(inputFood);
     };
+    const item = itemData.totalNutrientsKCal;
 
     return (
         <div className="add-food-page">
@@ -60,6 +75,13 @@ const AddFood = ({ date }) => {
 
                 <button className="add-food-page__search">Search</button>
             </form>
+            <FoodData
+                amount={food.amount}
+                size={food.size}
+                foodText={food.foodText}
+                item={item}
+            />
+
         </div>
     );
 };
