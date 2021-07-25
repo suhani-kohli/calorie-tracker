@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Styles.css";
 import { app_id, app_key } from "../../constants/AppConstants";
 import FoodData from "../../components/FoodData";
+import AddFoodToDiary from "../../components/AddFoodToDiary";
 
 
 const AddFood = ({ date }) => {
@@ -82,6 +83,15 @@ const AddFood = ({ date }) => {
                 item={item}
             />
 
+            <AddFoodToDiary
+                amount={food.amount}
+                size={food.size}
+                foodText={food.foodText}
+                date={date}
+                protein={(item.PROCNT_KCAL.quantity / 4).toFixed(1)}
+                carbs={(item.CHOCDF_KCAL.quantity / 4).toFixed(1)}
+                fat={(item.FAT_KCAL.quantity / 9).toFixed(1)}
+            />
         </div>
     );
 };
