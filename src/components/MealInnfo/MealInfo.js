@@ -3,32 +3,8 @@ import { Link } from "react-router-dom";
 import { FaRegTrashAlt } from "react-icons/fa";
 import "./Styles.css";
 
-const MealInfo = ({ date, mealName }) => {
-  const diary = [
-    {
-      id: 1,
-      mealName: "Breakfast",
-      foodItem: "Eggs",
-      amount: 4,
-      protein: 22.25,
-      carbs: 1.25,
-      fat: 16.88,
-      calories: 246,
-      size: "",
-    },
-    {
-      id: 2,
-      mealName: "Lunch",
-      foodItem: "pizza",
-      amount: 1,
-      protein: 20.75,
-      carbs: 58,
-      fat: 24.55,
-      calories: 536,
-      size: "200g",
-    },
-  ];
-
+const MealInfo = ({ date, mealName, diary }) => {
+  
   let totalKcal = 0,
     totalProtein = 0,
     totalCarbs = 0,

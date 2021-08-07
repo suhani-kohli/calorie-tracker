@@ -2,31 +2,8 @@ import React from "react";
 import "./Styles.css";
 
 // Basically just a copy of FoodDiaryRenderMeal component with a small change.
-const DailyTotal = ({ date, mealName }) => {
-  const diary = [
-    {
-      id: 1,
-      mealName: "Breakfast",
-      foodItem: "Eggs",
-      amount: 4,
-      protein: 22.25,
-      carbs: 1.25,
-      fat: 16.88,
-      calories: 246,
-      size: "",
-    },
-    {
-      id: 2,
-      mealName: "Lunch",
-      foodItem: "pizza",
-      amount: 1,
-      protein: 20.75,
-      carbs: 58,
-      fat: 24.55,
-      calories: 536,
-      size: "200g",
-    },
-  ];
+const DailyTotal = ({ date, mealName, diary }) => {
+
   const goals = { kcal: 2000, protein: 175, carbs: 225, fat: 44 };
 
   let totalKcal = 0,

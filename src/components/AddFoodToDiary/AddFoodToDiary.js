@@ -4,12 +4,13 @@ import "./Styles.css";
 const AddFoodToDiary = ({
   userId = "1234567890",
   date,
-  foodText,
+  foodItem,
   amount,
   size,
   protein,
   carbs,
-  fat
+  fat,
+  calories
 }) => {
   const handleAddToDiaryClick = () => {
     addFoodItemToDiary();
@@ -18,7 +19,25 @@ const AddFoodToDiary = ({
 
   const addFoodItemToDiary = () => {
     // add to Diary
-    console.log("wadding to diary");
+    console.log("adding to diary");
+    const requestOptions = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ 
+        userId, 
+        mealName: selectedMealName,
+        date,
+        foodItem,
+        amount,
+        size,
+        protein,
+        carbs,
+        fat,
+        calories,
+     })
+  };
+  fetch('http://localhost:8080/foodlogs', requestOptions)
+      .then(response => response.json())
   };
   const meals = ["Breakfast", "Lunch", "Dinner"];
   const [selectedMealName, setSelectedMealName] = useState("Breakfast");
